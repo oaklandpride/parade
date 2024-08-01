@@ -1,0 +1,17 @@
+---
+layout: default
+title: all pages
+---
+<div class="row">
+    <div class="col">
+        <hr class="bg-dark p-1 rounded">
+        <h2>Contingent Packet Examples</h2>
+        <p>Here are two sample "contingent packets", moving away from PDFs or emails with the info in the body, a unique link is created for each contingent that they can then share with everybody participating.</p>
+        
+<ol>
+    {% for page in site.contingents %}
+        <li><a href="{{ page.url }}">{{page.name}}</a> <span class="badge bg-secondary">{{ page.number }}</span></li>
+    {% endfor %}
+</ol>
+    </div>
+</div>

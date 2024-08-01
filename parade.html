@@ -1,0 +1,56 @@
+---
+layout: default
+---
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col">
+        <h1>Parade Registration</h1>
+        <p>Thank you for your interest in participating in the 2024 Parade. Please review the following information before proceeding with registration.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col">
+            <h2>Participation Requirements</h2>
+            <p>Before registering please ensure that your contingent is able to comply with the following requirements:</p>
+            <ol>
+                <li>All contingent participants must review and agree to the <a href="#">Oakland Pride Parade Participation Waiver</a>.</li>
+                <li>Contingents must have a minimum of 25 participants, and may have up to 500.</li>
+                <li>Contingents must have a designated contingent leader who will:
+                    <ul>
+                        <li>be the primary contact for the contingent.</li>
+                        <!-- <li>be responsible for the safety of the contingent.</li> -->
+                        <li>be responsible for keeping the continuous forward movement of the contingent along the parade route.</li>
+                    </ul>
+                </li>
+                <li>Contingents <strong>with vehicles</strong> must
+                    <ul>
+                        <li>have designated wheel monitors to walk along either side of all vehicles.</li>
+                        <li>show proof of vehicle registration, insurance, and valid driver's license.</li>
+                    </ul>
+                </li>
+                <li>Contingents must have a <a href="/rules#banner">compliant banner</a> to display at the front. Banners can be ordered as part of the registration process.</li>
+            </ol>
+
+        </div>
+    </div>
+
+    <div class="row mb-3 align-items-center justify-content-center">
+        <div class="col col-12">
+            <h2>Contingent Types</h2>
+            <p>Please review the following types of contingents to proceed with registration.</p>
+        </div>
+        {% for contingent in site.data.registration %}
+        <div class="col col-6 col-md-5 col-lg-3">
+            <div class="card p-3">
+                <h3>{{ contingent.name }}</h3>
+            <p>{{ contingent.description }}</p>
+            <p>Cost: {{ contingent.price }}</p>
+            <a href="{{ contingent.link }}" class="btn btn-primary">Register</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+</div>

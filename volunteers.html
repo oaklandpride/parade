@@ -1,0 +1,33 @@
+---
+layout: default
+title: Parade Volunteers
+---
+<div class="row d-lg-none text-end">
+    <div class="col">
+        <span>information for </span>
+        <a class="btn btn-dark" href="/leads">Parade Contingent Leads</a>
+    </div>
+</div>
+
+<div class="row my-3">
+    <div class="col">
+        <h1>Oakland Pride Parade Volunteers</h1>
+        <p>Our parade is largely produced by a dedicated team of volunteers who continue to show up year-after-year to help organize this wonderful event!</p>
+    </div>
+</div>
+<div class="row g-2">
+    <div class="col-12">
+        <h2>Volunteer Positions</h2>
+    </div>
+    {% for position in site.data.volunteer_positions %}
+    <div class="col col-12 col-md-6 col-xl-3">
+        <div class="card border-success">
+            <div class="card-body">
+                <h3 class="card-title placeholder-glow">{{position.name}}{% if position.name == blank?%}<span class="placeholder col-6"></span>{% endif %}</h3>
+                <p class="card-text placeholder-glow">{{position.desc}}{% if position.desc == blank? %} <span class="placeholder col-7"></span><span class="placeholder col-4"></span><span class="placeholder col-4"></span><span class="placeholder col-6"></span><span class="placeholder col-8"></span>{% endif %}</p>
+                <a href="{{position.link}}" target="_blank" class="btn btn-primary {% if position.link == blank? %}disabled placeholder{% endif %}">Sign Up</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>

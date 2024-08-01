@@ -1,0 +1,50 @@
+---
+layout: default
+title: Parade order
+---
+
+<div class="row">
+  <div class="col">
+    <h1>2024 Parade Broadcast Book</h1>
+    <p class="lead">
+      This resource will be finalized and available on
+      <strong>Sunday, September 8th, 2024</strong>.
+    </p>
+    <!-- <p>In addition to the contingent provided self-description, contingents were also asked: <em>Are there any people you would like to honor that have made strides for your organization for LGBTQ+ causes or otherwise?</em></p> -->
+  </div>
+</div>
+<div class="row">
+  <div class="col">
+    <ol>
+      {% for contingent in site.data.order_1 %}
+      <li>
+        <a href="#contingent_{{contingent.NUMBER}}"
+          >{{ contingent.NAME }}</a
+        >
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</div>
+<div class="row row-cols-1">
+  {% for contingent in site.data.order_1 %}
+  <div id="contingent_{{contingent.NUMBER}}" class="col">
+    <div class="border-bottom border-1 border-secondary-subtle-b m-1 p-2">
+      <h2>{{contingent.NUMBER}} &mdash; {{ contingent.NAME }}</h2>
+      <p
+        class="badge {%if contingent.type == 'sponsor' %}bg-secondary border border-1 border-danger{% endif %}{%if contingent.type == 'Elected Official' %}bg-secondary border border-1 border-warning{% endif %}{%if contingent.type == 'National Nonprofit' %}bg-success{% endif %}{%if contingent.type == 'Mid-Range Nonprofit' %}bg-info{% endif %}{%if contingent.type == 'Campaigning Politician' %}bg-warning text-dark{% endif %}{%if contingent.type == 'Government Agency/Political Group' %}bg-primary{% endif %} {%if contingent.type == 'Local Nonprofit' %}bg-secondary{% endif %}"
+      >
+        {{ contingent.type }}
+      </p>
+      {% if contingent.description != blank? %}
+      <p class="lead">{{ contingent.description }}</p>
+      {% endif %}
+      {% if contingent.honor != blank? %}
+      <hr />
+      <p>Honor:</p>
+      <p>{{ contingent.honor}}</p>
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</div>

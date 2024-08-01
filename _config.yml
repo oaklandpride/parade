@@ -1,0 +1,32 @@
+title: Oakland Pride Parade
+email: chris@oaklandpride.org
+description: "oakland pride parade"
+timezone: America/Los_Angeles
+
+permalink: /:categories/:year/:month/:day/:title/
+
+# Build settings
+plugins:
+  - jekyll-feed
+
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+sass:
+  load_paths:
+    - _sass
+    - vendor/bundle/ruby/3.2.0/gems/bootstrap-5.3.3/assets/stylesheets
+
+collections:
+  contingents:
+    output: true
+    permalink: /contingents/:title/

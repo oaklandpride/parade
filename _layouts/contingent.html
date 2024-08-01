@@ -1,0 +1,60 @@
+---
+layout: default
+---
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h2 class="h1"><strong>Contingent:</strong> {{page.name}}</h2>
+        </div>
+    </div>
+    <div class="row text-center align-items-center justify-content-evenly">
+        <div class="col">
+            <div class="alert border border-1 border-dark">
+                <p><strong class="h1">{{page.number}}</strong><br>lineup #</p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="alert alert-info border border-info">
+                <p><strong class="h1">{{page.zone}}</strong><br>assembly zone</p>
+            </div>
+        </div>
+        <div class="col col-12 col-md-auto">
+            <div class="alert border border-1 border-dark">
+                <p><strong class="h1">{{page.time}} </strong><br>lineup time</p>
+            </div>
+        </div>
+        <div class="col col-12">
+            <p>please note these may change slightly up until the week of the parade</p>
+        </div>
+    </div>
+    
+    <div class="row text-center justify-content-evenly align-items-center">
+        <div class="col border border-2 m-1">
+            <h2>{{page.marchers}}<br>MARCHERS</h2>
+        </div>
+        <div class="col border border-2 m-1">
+            <h2>{{page.vehicles}}<br>VEHICLES</h2>
+        </div>
+        <div class="col border border-2 m-1">
+            <h2>{{page.monitors}}<br>MONITORS</h2>
+        </div>
+    </div>
+    <div class="row my-3">
+        <div class="col">
+            <h3 class="fw-bold">Please be fully assembled and ready to march by the lineup time above.</h3>
+            <p>This is not the time your group will "step off" onto the route.</p>
+        </div>
+    </div>
+
+    {{content}}
+
+    <div class="row">
+        <div class="col-12">
+            <hr>
+        </div>
+        <div class="col col-12 col-md-8">
+            {% include map.html %}
+        </div>
+    </div>
+</div>
+

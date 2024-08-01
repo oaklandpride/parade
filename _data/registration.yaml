@@ -1,0 +1,27 @@
+- name: Clubs and Groups
+  description: groups of friends, clubs, and unincorporated associations
+  price: $100.00
+- name: San Francisco LGBTQ+ Non-Profits
+  description: 501(c)(3) organizations, directly serving the lgbtq+ community
+  price: $250.00
+- name: Elected Officials
+  description: show your lgbtq+ constituents that you support them. no campaigning allowed.
+  price: $500.00
+- name: Non-Profits
+  description: 501(c)(3) organizations
+  price: $1,000.00
+- name: Political Campaigns
+  description: candidates for office
+  price: $1,000.00
+- name: Local Businesses
+  description: businesses located in san francisco, with less than 1 million in annual revenue.
+  price: $1,500.00
+- name: Small Businesses
+  description: businesses with less than 1 million in annual revenue
+  price: $2,500.00
+- name: Employee Groups
+  description: groups of employees within a corporation, may not display company brands or iconography
+  price: $5,000.00
+- name: Corporations
+  description: businesses with more than 1 million in annual revenue
+  price: $10,000.00
